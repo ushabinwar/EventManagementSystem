@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body class="bg-gray-100 flex flex-col items-center">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-indigo-600 w-full p-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Event Management</h1>
+      <a href="/" class="bg-indigo-700 px-4 py-2 rounded-lg hover:bg-indigo-800">Home</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Create a New Event</h2>
+
+    <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+      <form action="/event/create" method="POST" class="space-y-4">
+        <!-- Event Name -->
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Event Name</label>
+          <input type="text" id="name" name="name" required
+            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            placeholder="Event Name">
+        </div>
+        <div>
+          <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+          <input type="text" id="location" name="location" required
+            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            placeholder="Event Location">
+        </div>
+
+        <!-- Event Date -->
+        <div>
+          <label for="date" class="block text-sm font-medium text-gray-700">Event Date</label>
+          <input type="date" id="date" name="date" required
+            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+
+        <!-- Event Description -->
+        <div>
+          <label for="description" class="block text-sm font-medium text-gray-700">Event Description</label>
+          <textarea id="description" name="description" rows="4" required
+            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            placeholder="Event Description"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit"
+            class="w-full px-4 py-2 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Create Event
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
